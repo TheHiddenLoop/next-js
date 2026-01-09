@@ -13,7 +13,7 @@ export default function Page() {
     message: ''
   });
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId:any) => {
     setActiveSection(sectionId);
     setMobileMenuOpen(false);
     const element = document.getElementById(sectionId);
@@ -22,11 +22,11 @@ export default function Page() {
     }
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e:any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     alert('Thank you for reaching out! We will get back to you within 24 hours.');
     setFormData({ name: '', email: '', phone: '', message: '' });
@@ -386,7 +386,7 @@ export default function Page() {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    rows="4"
+                    rows={4}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all resize-none"
                     placeholder="How can we help you?"
                   ></textarea>
