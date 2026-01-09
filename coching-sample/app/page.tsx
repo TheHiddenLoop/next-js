@@ -1,11 +1,11 @@
 "use client"
 
-import React, { useState } from 'react';
-import { Menu, X, ChevronRight, BookOpen, Users, Video, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube, Award, Target, Heart, Clock, Star, TrendingUp } from 'lucide-react';
+import { useState } from 'react';
+import { Menu, X, ChevronRight, BookOpen, Video, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube, Award, Target, Heart, Clock, Star, TrendingUp } from 'lucide-react';
 
 export default function Page() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
