@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     "Education Support",
   ],
   authors: [{ name: "Bright Path Academy" }],
+
   openGraph: {
     title: "Bright Path Academy",
     description:
@@ -36,9 +37,15 @@ export const metadata: Metadata = {
     locale: "en_IN",
     type: "website",
   },
+
   icons: {
-    icon: "/favicon.png",
-  },
+  icon: [
+    { url: "/icon.png", sizes: "32x32", type: "image/png" },
+    { url: "/icon.png", sizes: "192x192", type: "image/png" },
+  ],
+  apple: "/apple-touch-icon.png",
+},
+
 };
 
 export default function RootLayout({
